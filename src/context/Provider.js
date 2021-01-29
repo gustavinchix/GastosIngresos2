@@ -23,12 +23,13 @@ export default function Provider({ children }) {
   //Estados de botones radiales que muestran u ocultan transacciones
   const [incomeCheck, setIncomeCheck] = React.useState(true)
   const [expenseCheck, setExpenseCheck] = React.useState(true)
+  const [exchangeCheck, setExchangeCheck] = React.useState(false)
 
   //Estados de moneda a mostrar
 
 
   return (
-    <Context.Provider value={{transactions, addTransaction, setTransactions, incomeCheck, setIncomeCheck, expenseCheck, setExpenseCheck}}>
+    <Context.Provider value={{transactions, addTransaction, setTransactions, incomeCheck, setIncomeCheck, expenseCheck, setExpenseCheck, exchangeCheck, setExchangeCheck}}>
       { children }
     </Context.Provider>
   )
