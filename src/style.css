@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -11,6 +11,53 @@
 body {
   background-color: #f7f7f7;
   font-family: 'Lato', sans-serif;
+  color:#212529;
+}
+
+.navbar{
+    box-shadow: rgba(133, 133, 133, 0.4) 0px 5px, rgba(134, 134, 134, 0.3) 0px 10px, rgba(173, 173, 173, 0.2) 0px 15px, rgba(201, 201, 201, 0.1) 0px 20px, rgba(235, 235, 235, 0.05) 0px 25px;
+    background-color: #252525;
+    color:#dedede;
+    font-weight: 900;
+}
+
+.titleThin{
+    font-weight:300;
+}
+.sectionTitle{
+    margin-bottom: 8px;
+}
+
+.section{
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    color: #333;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.sections{
+    list-style-type: none;
+    padding: 0;
+    border-top: 1px solid #bbb;
+    margin-bottom: 40px;
+    padding-top: 0px;
+}
+
+.inputRow{
+    margin:10px;
+    vertical-align: center;
+    align-items: center  ;
+    align-content: center;
+}
+
+.container-fluid{
+    text-align: left;
+    align-items: left;
+    font-size: 30px;
+    display: inline-block !important;
 }
 
 h1 {
@@ -19,15 +66,30 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 h4 {
   margin: 0;
   text-align: right;
     align-items: center  ;
+}
+
+h5{
+    align-items: center  ;
+    justify-content: center;
+    display: flex;
+    margin: 15px 10px;
+    align-items: flex-end;
+}
+
+label{
+    margin-right: 20px;
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 .inc-exp-container {
@@ -75,37 +137,88 @@ h4 {
     max-width:100%;
 }
 
-label {
-  display: inline-block;
-  margin: 10px 0;
+.chartbox{
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    align-items: flex-end
 }
 
+.barra{
+    background: linear-gradient(180deg, rgb(207, 207, 207) 0%, rgb(235, 235, 235) 90%);
+    box-shadow: 0 1px 3px rgba(167, 167, 167, 0.12), 0 1px 2px rgba(182, 182, 182, 0.24) inset;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 5px 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 0 0 13%;
+    max-width: 100% !important;
+    
+}
+
+.form-check-input{
+    position: relative !important;
+    vertical-align: center;
+    margin: 0px 0px 0px 15px;
+}
+
+.btn{
+    margin: 0px 10px 0px 20px !important;
+}
+
+.form-check-label{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0px 0px 0px 5px !important;
+}
+.concept{
+    text-align: left !important;
+    padding: -10 !important;
+    border-left: 1px solid #dedede;
+}
+.sign{
+    font-size: 12px;
+}
+
+.totAmounts{
+    font-size: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 5px 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 0 0 13%;
+    max-width: 100% !important;
+}
+.amount{
+    text-align: end;
+    font-weight: 400;
+}
+
+@media (min-width: 1200px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1300px;
+}}
+
+.columnas{
+    padding: 40px
+}
 input[type='text'],
+input[type='date'],
 input[type='number'] {
   border: 1px solid #dedede;
   border-radius: 2px;
-  display: block;
   font-size: 16px;
   padding: 10px;
-  width: 100%;
+  margin: 0px 10px 0px 10px;
 }
 
 input[type='checkbox'] {
     margin: 3px;
 }
 
-.btn {
-  cursor: pointer;
-  background-color: #9c88ff;
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
-}
 
 .btn:focus,
 .delete-btn:focus {
@@ -115,15 +228,17 @@ input[type='checkbox'] {
 .list {
   list-style-type: none;
   padding: 0;
+  border-top: 1px solid #bbb;
   margin-bottom: 40px;
+  padding-top: 0px;
 }
 
 .list li {
   background-color: #fff;
   box-shadow: var(--box-shadow);
+  border-radius: 5px;
   color: #333;
   display: flex;
-  justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;

@@ -6,7 +6,7 @@ import Context from '../context/Context'
 
 export default function CheckBtns() {
 
-    const {transactions, incomeCheck, setIncomeCheck, expenseCheck, setExpenseCheck} = React.useContext(Context)
+    const { incomeCheck, setIncomeCheck, expenseCheck, setExpenseCheck} = React.useContext(Context)
 
     //cuando se haga click en la checkbox de gastos, se invierte el valor de expenseCheck
     const handleChangeExpense = () => {
@@ -21,8 +21,10 @@ export default function CheckBtns() {
     //input checkbox que al hacer click, se ejecutan las funciones anteriores
     return (
         <div>
-            <input type="checkbox" value="Expense" name="Expense" defaultChecked="true" onClick={handleChangeExpense}/> Gastos 
-            <input type="checkbox" value="Income" name="Income" defaultChecked="true" onClick={handleChangeIncome}/> Ingresos 
+            <input type="checkbox" value="Expense" name="Expense" defaultChecked="true" onClick={handleChangeExpense}/>
+            <label>Gastos </label>
+            <input type="checkbox" value="Income" name="Income" defaultChecked="true" onClick={handleChangeIncome}/>
+            <label>Ingresos</label>
         </div>
 
     )

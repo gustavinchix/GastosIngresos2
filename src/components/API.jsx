@@ -46,16 +46,15 @@ export default function API() {
         <Navbar />
         <ContextProvider>
           <div className = "container">
-            <div className = "row">
-              <div className = "col-sm-12 col-lg-6">
-                <CheckBtns />
-                <TransactionList />
+            <div className = "row justify-content-between">
+              <div className = "col-12 col-sm-12 col-md-12 col-xl-6 columnas">
+                <TransactionList/>
                 <Balance />
               </div>
-              <div className = "col-sm-12 col-lg-6">
-                  <AddTransaction />
-                  <Analytics />
-                  <CurrencyConverter />
+              <div className = "col-12 col-sm-12 col-md-12 col-xl-6 columnas">
+                <AddTransaction/>
+                <Analytics />
+                <CurrencyConverter />
               </div>
             </div>
           </div>
